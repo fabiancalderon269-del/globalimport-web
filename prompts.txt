@@ -1,0 +1,5 @@
+Etapa 1: Estructura Inicial del Sitio
+
+prompt: desarrolla un sitio web de comercio electronico enfocado en una empresa importadora de productos usando html y javasScript, el contexto del negocio es que la empresa ficticia "Globalimport S.A" se dedica a la importacion y distribucion de productos electronicos, indumentaria y articulos del hogar, el sitio web debe transmitir confianza, profesionalismo y facilitar el contaco con potenciales clientes, el sitio tambien debe comunicar claramente la propuesta de valor de la empresa y las secciones de servicio, para el sitio quiero un navbar, una seccion hero, una seccion de srvicios (minimo 4), una seccion de ¿porque elegirnos?, un footer y un estilo visual (styles.css) mas trabajado y moderno, el sitio tambien debe ser responsive
+Proposito: desarrllar la estructura inicial del sitio web de la empresa ficticia "Globalimport S.A"
+Evaluacion: El resultado fue muy util, logrando crar el sitio cumpliendo con todos los requisitos solicitados
