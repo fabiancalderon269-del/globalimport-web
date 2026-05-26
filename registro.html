@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Socios | GlobalImport S.A.</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Global<span>Import</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html#inicio">Inicio</a></li>
+                <li><a href="index.html#servicios">Servicios</a></li>
+                <li><a href="registro.html" class="active">Registro</a></li>
+                <li><a href="index.html#contacto" class="btn-contact">Contáctanos</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container register-main">
+        <div class="form-wrapper">
+            <header class="form-header">
+                <h1>Únete a nuestra Red de Distribución</h1>
+                <p>Completa el formulario para comenzar a importar con nosotros. Los campos marcados con <span class="required">*</span> son obligatorios.</p>
+            </header>
+
+            <form id="registrationForm" class="styled-form">
+                <!-- Sección 1: Datos Personales, Contacto y Acceso -->
+                <fieldset class="form-section">
+                    <legend>Datos Personales y de Acceso</legend>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="nombre">Nombre Completo <span class="required">*</span></label>
+                            <input type="text" id="nombre" name="nombre" required placeholder="Ej: Juan Pérez">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo Electrónico <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" required placeholder="juan@empresa.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="telefono">Teléfono de Contacto <span class="required">*</span></label>
+                            <input type="tel" id="telefono" name="telefono" required placeholder="+54 11 ...">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Contraseña <span class="required">*</span></label>
+                            <input type="password" id="password" name="password" required placeholder="Mínimo 8 caracteres">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- Sección 2: Dirección de Entrega -->
+                <fieldset class="form-section">
+                    <legend>Dirección de Entrega</legend>
+                    <div class="form-grid">
+                        <div class="form-group full-width">
+                            <label for="direccion">Calle y Número <span class="required">*</span></label>
+                            <input type="text" id="direccion" name="direccion" required placeholder="Av. Principal 123">
+                        </div>
+                        <div class="form-group">
+                            <label for="ciudad">Ciudad <span class="required">*</span></label>
+                            <input type="text" id="ciudad" name="ciudad" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="codigo_postal">Código Postal <span class="required">*</span></label>
+                            <input type="text" id="codigo_postal" name="codigo_postal" required>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- Sección 3: Preferencias y Términos -->
+                <fieldset class="form-section">
+                    <legend>Preferencias de Importación</legend>
+                    <p class="field-info">Selecciona las categorías de tu interés:</p>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="pref" value="electronica"> Electrónica</label>
+                        <label><input type="checkbox" name="pref" value="indumentaria"> Indumentaria</label>
+                        <label><input type="checkbox" name="pref" value="hogar"> Hogar</label>
+                    </div>
+                    <div class="terms-group">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">Acepto los <a href="#">términos y condiciones</a> de GlobalImport S.A. <span class="required">*</span></label>
+                    </div>
+                </fieldset>
+
+                <!-- Sección 4: Botones de Acción -->
+                <div class="form-actions">
+                    <button type="reset" class="btn-secondary">Limpiar Formulario</button>
+                    <button type="submit" class="btn-primary">Crear Cuenta</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="simple-footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 GlobalImport S.A. - Área de Registro Protegida</p>
+                <div class="footer-links">
+                    <a href="index.html">Volver al Inicio</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
