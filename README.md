@@ -10,3 +10,5 @@ Este codigo sirve para crear un sitio web de una empresa ficticia "GlobalImport 
 - `index.html`: Estructura semántica del sitio.
 - `styles.css`: Estilos personalizados y media queries.
 - `script.js`: Funcionalidad de navegación e interactividad.
+- `registro.html`: Formulario de registro de usuarios.
+- `validaciones.js`: Funcionalidd para prevenir envio de datos incorrectos.

@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-light">
+<body>
     <nav class="navbar">
         <div class="container">
             <a href="index.html" class="logo">Global<span>Import</span></a>
@@ -33,52 +33,121 @@
                 <p>Completa el formulario para comenzar a importar con nosotros. Los campos marcados con <span class="required">*</span> son obligatorios.</p>
             </header>
 
-            <form id="registrationForm" class="styled-form">
-                <!-- Sección 1: Datos Personales, Contacto y Acceso -->
+            <div id="successMessage" class="success-alert" style="display: none;">
+                <h3>¡Registro Exitoso!</h3>
+                <p>Tu solicitud ha sido enviada. Un asesor de GlobalImport S.A. se contactará contigo pronto.</p>
+                <a href="index.html" class="btn-primary">Volver al Inicio</a>
+            </div>
+
+            <form id="registrationForm" class="styled-form" novalidate>
+                <!-- Sección 1: Datos Personales -->
                 <fieldset class="form-section">
-                    <legend>Datos Personales y de Acceso</legend>
+                    <legend>1. Datos Personales</legend>
                     <div class="form-grid">
                         <div class="form-group">
                             <label for="nombre">Nombre Completo <span class="required">*</span></label>
-                            <input type="text" id="nombre" name="nombre" required placeholder="Ej: Juan Pérez">
+                            <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez">
+                            <span class="error-text"></span>
                         </div>
                         <div class="form-group">
+                            <label for="fecha_nacimiento">Fecha de Nacimiento <span class="required">*</span></label>
+                            <input type="date" id="fecha_nacimiento" name="fecha_nacimiento">
+                            <span class="error-text"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="rut">RUT/DNI <span class="required">*</span></label>
+                            <input type="text" id="rut" name="rut" placeholder="12.345.678-9">
+                            <span class="error-text"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="genero">Género <span class="required">*</span></label>
+                            <select id="genero" name="genero">
+                                <option value="">Seleccione...</option>
+                                <option value="M">Masculino</option>
+                                <option value="F">Femenino</option>
+                                <option value="O">Otro</option>
+                            </select>
+                            <span class="error-text"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="nacionalidad">Nacionalidad <span class="required">*</span></label>
+                            <input type="text" id="nacionalidad" name="nacionalidad" placeholder="Ej: Chilena">
+                            <span class="error-text"></span>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- Sección 2: Contacto y Acceso -->
+                <fieldset class="form-section">
+                    <legend>2. Contacto y Acceso</legend>
+                    <div class="form-grid">
+                        <div class="form-group">
                             <label for="email">Correo Electrónico <span class="required">*</span></label>
-                            <input type="email" id="email" name="email" required placeholder="juan@empresa.com">
+                            <input type="email" id="email" name="email" placeholder="juan@empresa.com">
+                            <span class="error-text"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm_email">Confirmar Correo <span class="required">*</span></label>
+                            <input type="email" id="confirm_email" name="confirm_email">
+                            <span class="error-text"></span>
                         </div>
                         <div class="form-group">
                             <label for="telefono">Teléfono de Contacto <span class="required">*</span></label>
-                            <input type="tel" id="telefono" name="telefono" required placeholder="+54 11 ...">
+                            <input type="tel" id="telefono" name="telefono" placeholder="+56 9 ...">
+                            <span class="error-text"></span>
                         </div>
                         <div class="form-group">
                             <label for="password">Contraseña <span class="required">*</span></label>
-                            <input type="password" id="password" name="password" required placeholder="Mínimo 8 caracteres">
+                            <input type="password" id="password" name="password" placeholder="Mínimo 8 caracteres">
+                            <span class="error-text"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm_password">Confirmar Contraseña <span class="required">*</span></label>
+                            <input type="password" id="confirm_password" name="confirm_password">
+                            <span class="error-text"></span>
                         </div>
                     </div>
                 </fieldset>
 
-                <!-- Sección 2: Dirección de Entrega -->
+                <!-- Sección 3: Dirección de Entrega -->
                 <fieldset class="form-section">
-                    <legend>Dirección de Entrega</legend>
+                    <legend>3. Dirección de Entrega</legend>
                     <div class="form-grid">
-                        <div class="form-group full-width">
-                            <label for="direccion">Calle y Número <span class="required">*</span></label>
-                            <input type="text" id="direccion" name="direccion" required placeholder="Av. Principal 123">
+                        <div class="form-group">
+                            <label for="pais">País <span class="required">*</span></label>
+                            <input type="text" id="pais" name="pais">
+                            <span class="error-text"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="provincia">Provincia/Estado <span class="required">*</span></label>
+                            <input type="text" id="provincia" name="provincia">
+                            <span class="error-text"></span>
                         </div>
                         <div class="form-group">
                             <label for="ciudad">Ciudad <span class="required">*</span></label>
-                            <input type="text" id="ciudad" name="ciudad" required>
+                            <input type="text" id="ciudad" name="ciudad">
+                            <span class="error-text"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="direccion">Calle y Número <span class="required">*</span></label>
+                            <input type="text" id="direccion" name="direccion" placeholder="Av. Principal 123">
+                            <span class="error-text"></span>
                         </div>
                         <div class="form-group">
                             <label for="codigo_postal">Código Postal <span class="required">*</span></label>
-                            <input type="text" id="codigo_postal" name="codigo_postal" required>
+                            <input type="text" id="codigo_postal" name="codigo_postal">
+                            <span class="error-text"></span>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="referencia">Referencia de Dirección</label>
+                            <textarea id="referencia" name="referencia" rows="3" placeholder="Ej: Portón azul frente a la plaza"></textarea>
                         </div>
                     </div>
                 </fieldset>
 
-                <!-- Sección 3: Preferencias y Términos -->
+                <!-- Sección 4: Preferencias y Términos -->
                 <fieldset class="form-section">
-                    <legend>Preferencias de Importación</legend>
+                    <legend>4. Preferencias y Términos</legend>
                     <p class="field-info">Selecciona las categorías de tu interés:</p>
                     <div class="checkbox-group">
                         <label><input type="checkbox" name="pref" value="electronica"> Electrónica</label>
@@ -86,14 +155,15 @@
                         <label><input type="checkbox" name="pref" value="hogar"> Hogar</label>
                     </div>
                     <div class="terms-group">
-                        <input type="checkbox" id="terms" name="terms" required>
-                        <label for="terms">Acepto los <a href="#">términos y condiciones</a> de GlobalImport S.A. <span class="required">*</span></label>
+                        <input type="checkbox" id="terms" name="terms">
+                        <label for="terms">Acepto los <a href="#">términos y condiciones</a> <span class="required">*</span></label>
+                        <span class="error-text"></span>
                     </div>
                 </fieldset>
 
-                <!-- Sección 4: Botones de Acción -->
+                <!-- Botones de Acción -->
                 <div class="form-actions">
-                    <button type="reset" class="btn-secondary">Limpiar Formulario</button>
+                    <button type="reset" id="btnReset" class="btn-secondary">Limpiar Formulario</button>
                     <button type="submit" class="btn-primary">Crear Cuenta</button>
                 </div>
             </form>
@@ -111,5 +181,6 @@
         </div>
     </footer>
     <script src="script.js"></script>
+    <script src="validaciones.js"></script>
 </body>
 </html>

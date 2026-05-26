@@ -9,3 +9,9 @@ Etapa 2: Formulario de Regristro de Usuarios
 prompt: crea una pagina de registro (registro html) a la que se accede desde el link "Registro" de la navbar, el formulario debe ser visualmente atractivo, estar correctamente estructurado semanticamente y recopilar informacion detallada del usuario que desea operar con Gloabalimport S.A, para los requisitos del formulario, el formulario debe estar dividido en 4 secciones, una seccion de datos personales, datos de contacto y acceso, una seccion de direccion de entrega, una seccion de preferencias y terminos y botones de accion, todos los campos deben tener su etiqueta <label> asociada correspondiente usando el atributo for / id, los campos requeridos deben marcarse visualmente
 Proposito: desarrllar la pagina de registro de usuarios de la empresa ficticia "Globalimport S.A"
 Evaluacion: El resultado esta bien pero se debe mejorar el formulario de registro
+
+Etapa 3: Validacion de Formulario con javasScript
+
+prompt: agrega validaciones.js que intercepte el envio del formulario y aplique validaciones del lado del cliente antes de permitir que el formulario se procese, el usuario debe retcibir retroalimentacion visual clara e inmediata ante cualquier error, las validaciones requeridas son: las validacion de datos personales (nombre completo, fecha de nacimiento, rut, genero y nacionalidad), validaciones de contacto y acceso: (email, confirmar email, contraseña, confirmar contraseña, telefono), validaccion de direccion: (pais y provincia, ciudad, calle y numero, codigo postal, textarea(referencia) ), el compotamiento de la interfaz quiero una retroalimentacion visual mas completo, una validacion en tiempo real vs al enviar y un mensaje de exito y unas pistas y conceptos JS involucrados
+Proposito implementar una logica que previene el envio de datos incorrectos
+Evaluacion: el resulatdo fue aceptable pero se pueda mejorar
